@@ -1,0 +1,122 @@
+/* Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #D64545;
+  --background-color: #F5F5F5;
+  --text-color: #333333;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Selectores */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Box Model */
+.container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-item {
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+/* Shapes / clip */
+.clip-circle {
+  width: 150px;
+  height: 150px;
+  background-color: var(--primary-color);
+  clip-path: circle(50%);
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* Opacity */
+.opacity-box {
+  width: 200px;
+  height: 200px;
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  margin: 20px auto;
+}
+
+/* Z-index */
+.z-index-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-color);
+  margin: 20px auto;
+}
+
+.z-index-box::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
