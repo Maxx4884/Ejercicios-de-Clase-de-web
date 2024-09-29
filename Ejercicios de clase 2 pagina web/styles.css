@@ -1,0 +1,151 @@
+/* Variables de colores y sombras */
+:root {
+    --primary-color: #3b6978;
+    --secondary-color: #204051;
+    --accent-color: #cae8d5;
+    --text-color: #1b262c;
+    --background-color: #f5f5f5;
+    --highlight-color: #ffcb74;
+    --transition: all 0.3s ease;
+  }
+  
+  /* Estilo global */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Sección principal */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo de artículos */
+  section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: var(--highlight-color);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+  
+  article {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 5px solid var(--highlight-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  article h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  
+  article p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+  }
+  
+  /* Consejos de viaje */
+  ul {
+    list-style-type: square;
+    margin-left: 20px;
+    color: var(--secondary-color);
+  }
+  
+  ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  footer nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    transition: var(--transition);
+  }
+  
+  footer nav a:hover {
+    color: var(--highlight-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    article h3 {
+      font-size: 1.5rem;
+    }
+  
+    section h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
