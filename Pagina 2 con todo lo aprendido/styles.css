@@ -1,0 +1,150 @@
+/* Importar una fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Secciones */
+section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los artículos */
+article {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la galería */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Box model */
+section, article, footer {
+    box-sizing: border-box;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+/* Z-index */
+header {
+    z-index: 10;
+    position: relative;
+}
+
+/* Opacidad en la galería */
+figure img {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+figure img:hover {
+    opacity: 1;
+}
+
+/* Clip shapes */
+aside {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
